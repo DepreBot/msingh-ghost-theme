@@ -11,24 +11,7 @@
             <!--h2 itemprop="about" class="post-subtitle"></h2-->
           </header>
           <aside class="post-side">
-            <div class="post-author">
-              {{#if author.image}}
-                <a href="{{author.website}}" class="post-author-avatar">
-                  <img src="{{author.image}}" alt="{{author.name}}">
-                </a>
-              {{/if}}
-              <div class="post-author-info">
-                <a href="{{author.website}}" class="post-author-name">
-                  {{author.name}}
-                </a>
-                <p class="post-author-bio">{{author.bio}}</p>
-              </div>
-            </div>
-          </aside>
-          <div itemprop="articleBody" class="post-body">
-            {{content}}
-          </div>
-          <footer class="post-footer">
+
             <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
               {{#if author.image}}
                 <a href="{{author.website}}" class="post-author-avatar">
@@ -36,19 +19,60 @@
                 </a>
               {{/if}}
               <div class="post-author-info">
-                <h4 class="post-footer-heading">Written By</h4>
                 <a href="{{author.website}}" itemprop="url" class="post-author-name">
                   <span itemprop="name">{{author.name}}</span>
                 </a>
-                <p itemprop="description" class="post-author-bio">{{author.bio}}</p>
+                <p itemprop="description" class="post-author-bio">Founder of <a href="http://www.websterfolks.com">WebsterFolks</a>, Working on <a href="http://www.microworkr.com">MicroWorkr</a> (Coming Soon), Love Food, Web Developer & Entrepreneur From India.</p>
+                {{#if author.location}}
+                  <p class="post-author-location">{{author.location}}</p>
+                {{/if}}
+                <p class="post-info">
+                  <b class="post-info-title">Published on</b>
+                  <time class="post-date">{{date format='MMMM DD, YYYY'}}</time>
+                </p>
               </div>
             </div>
-            <div class="post-social">
+
+          </aside>
+          <div itemprop="articleBody" class="post-body">
+            {{content}}
+
+            <div class="post-social text-center">
               <h4 class="post-footer-heading">Spread the word</h4>
               <a href="#" data-action="share-twitter"><i class="fa fa-fw fa-lg fa-twitter"></i></a>
               <a href="#" data-action="share-facebook"><i class="fa fa-fw fa-lg fa-facebook"></i></a>
               <a href="#" data-action="share-gplus"><i class="fa fa-fw fa-lg fa-google-plus"></i></a>
-            </div>
+            </div><br>
+
+
+          </div>
+          <footer class="post-footer">
+
+
+             <!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="http://websterfolks.us4.list-manage1.com/subscribe/post?u=d20ef0f2d44b0fed0db91c6c2&amp;id=ab28fca01c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_d20ef0f2d44b0fed0db91c6c2_ab28fca01c" value=""></div>
+    <p>Subscribe to know the insights of running <br>a business and some helpful php code snippets</p>
+
+  <input type="text" value="" name="FNAME" class="email" id="mce-FNAME" placeholder="first name" required>
+  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+
+<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+</form>
+<br>
+
+<em>Need help right now?</em><br>
+<a class="btn btn-mini" href="mailto:mandeep@websterfolks.com?subject=hello&nbsp;email me">email me</a> <em>&nbsp; OR &nbsp;</em>
+<div class="tweet-me"><a href="https://twitter.com/intent/tweet?screen_name=meSingh9" class="twitter-mention-button" data-size="large" data-related="meSingh9" data-dnt="true">Tweet to @meSingh9</a></div>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+</div>
+
+<!--End mc_embed_signup-->
+
+
           </footer>
         </section>
       {{/post}}
